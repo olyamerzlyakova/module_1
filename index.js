@@ -10,5 +10,17 @@
   console.log(`Общая сумма товара: ${productQuantity * productPrice}`);
 }
 
+{
+  const productTitle = 'Blanket';
+  const productCategory = 'Home textiles';
+  const productQuantity = 3;
+  const productPrice = 1999;
+
+  console.log(`Название товара: ${productTitle}`);
+  console.log(`Общая сумма товара: ${productQuantity * productPrice}`);
+}
+
+
+
 
 
