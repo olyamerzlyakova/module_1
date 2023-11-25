@@ -1,5 +1,6 @@
 'use strict';
 
+/*
 {
   const productTitle = 'Coffee grinder';
   const productCategory = 'Kitchen appliances';
@@ -19,7 +20,7 @@
   console.log(`Название товара: ${productTitle}`);
   console.log(`Общая сумма товара: ${productQuantity * productPrice}`);
 }
-
+*/
 
 
 

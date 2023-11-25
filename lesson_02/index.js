@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
 {
@@ -23,20 +23,18 @@
 */
 
 {
-  const productTitle = prompt('Название товара?', 'Плед');
-  const productCategory = prompt('Категория товара?', 'Текстиль для дома');
-  const productQuantity = +prompt('Количество товара?', 3);
-  const productPrice = +prompt('Цена товара?', 1999);
+  const productTitle = prompt("Название товара?", "Плед");
+  const productCategory = prompt("Категория товара?", "Текстиль для дома");
+  const productQuantity = +prompt("Количество товара?", 3);
+  const productPrice = +prompt("Цена товара?", 1999);
 
-  console.log(`Тип данных Названия товара: ${typeof productTitle}`);
-  console.log(`Тип данных Категории товара: ${typeof productCategory}`);
-  console.log(`Тип данных Количества товара: ${typeof productQuantity}`);
-  console.log(`Тип данных Цены товара: ${typeof productPrice}`);
-
-  console.log(`На складе ${productQuantity} единицы товара "${productTitle}" на сумму ${productQuantity * productPrice} рублей.`);
+  if (Number.isFinite(productQuantity) && Number.isFinite(productPrice)) {
+    console.log(
+      `На складе ${productQuantity} единицы товара "${productTitle}" 
+      на сумму ${productQuantity * productPrice} рублей.`
+    );
+  } else {
+    console.log("Вы ввели некорректные данные");
+    alert("Вы ввели некорректные данные");
+  }
 }
-
-
-
-
-
