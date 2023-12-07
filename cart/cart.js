@@ -19,13 +19,18 @@ const cart = {
     this.getTotalPrice();
   },
   increaseCount(number) {
-    return (this.count += number);
+    this.count += number;
   },
   calculateItemPrice() {
     this.totalPrice = this.items[0].itemPrice * this.items[0].numberOfItems;
   },
   clear() {
-    return (this.items = []), (this.totalPrice = 0), (this.count = 0);
+    const cleanCart = {
+      items: [],
+      totalPrice: 0,
+      count: 0,
+    };
+    Object.assign(cart, cleanCart);
   },
   print() {
     console.log(JSON.stringify(this.items));
