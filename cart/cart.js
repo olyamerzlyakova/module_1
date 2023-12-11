@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const cart = {
   items: [],
@@ -6,15 +6,15 @@ const cart = {
   get totalPrice() {
     return this.calculateItemPrice();
   },
-  set totalPrice(value) {
-    return value;
+  set totalPrice(val) {
+    this.price = val;
   },
 
   add(itemTitle, itemPrice, numberOfItems = 1) {
     this.items.push({
-      itemTitle: itemTitle,
-      itemPrice: itemPrice,
-      numberOfItems: numberOfItems,
+      itemTitle,
+      itemPrice,
+      numberOfItems,
     });
 
     this.increaseCount(numberOfItems);
@@ -27,10 +27,10 @@ const cart = {
   },
 
   clear() {
+    this.totalPrice = 0;
     const cleanCart = {
       items: [],
       count: 0,
-      totalPrice: 0,
     };
     Object.assign(cart, cleanCart);
   },
@@ -41,13 +41,13 @@ const cart = {
   },
 };
 
-cart.add("Попкорн", 100, 3);
+cart.add('Попкорн', 100, 3);
 cart.print();
 cart.clear();
 
-cart.add("Лего Хогвартс", 5000, 2);
+cart.add('Лего Хогвартс', 5000, 2);
 cart.print();
 cart.clear();
 
-cart.add("Плед", 1000);
+cart.add('Плед', 1000);
 cart.print();
