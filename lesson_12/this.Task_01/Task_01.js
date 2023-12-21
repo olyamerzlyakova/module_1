@@ -1,6 +1,8 @@
 'use strict';
 
 const rectangle = {
+  rectangleWidth: 5,
+  rectangleHeight: 5,
   set width(val) {
     if (isFinite(val)) {
       this.rectangleWidth = val;
@@ -17,8 +19,6 @@ const rectangle = {
   get area() {
     return `${this.rectangleWidth * this.rectangleHeight}см`;
   },
-  rectangleWidth: 5,
-  rectangleHeight: 5,
 };
 
 rectangle.width = 10;
