@@ -73,11 +73,7 @@
                Вы выбрали: ${checkedGamerFigure}
                Вы выиграли!`);
           return start();
-        } else if (
-          (computerFigure === 'камень' && checkedGamerFigure === 'ножницы') ||
-          (computerFigure === 'ножницы' && checkedGamerFigure === 'бумага') ||
-          (computerFigure === 'бумага' && checkedGamerFigure === 'камень')
-        ) {
+        } else {
           result.computer++;
           alert(`Компьютер выбрал: ${computerFigure}
                Вы выбрали: ${checkedGamerFigure}
