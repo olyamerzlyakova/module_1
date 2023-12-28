@@ -39,10 +39,9 @@
       console.log('gamerNumber: ', gamerNumber);
       const botFigure = getBotFigure();
       console.log('botFigure: ', botFigure);
-
       if (
-        (gamerNumber % 2 === 0 && botFigure === 'четное') ||
-        (gamerNumber % 2 !== 0 && botFigure === 'нечетное')
+        (gamerNumber % 2 === 0 && botFigure === botFigures[0]) ||
+        (gamerNumber % 2 !== 0 && botFigure === botFigures[1])
       ) {
         result.player -= gamerNumber;
         console.log('result.player: ', result.player);
