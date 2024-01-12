@@ -24,3 +24,6 @@ const itemTwoProps = document.querySelectorAll('.item_six .props__item_two');
 const itemTwoPropsList = document.querySelector('.item_two .props__list');
 
 itemTwoPropsList.append(...itemTwoProps);
+
+const ads = document.querySelector('.ads');
+ads.remove();
